@@ -1,11 +1,7 @@
-import { styles } from 'ansi-colors';
 import React from 'react';
-import {View, Text, Image, TextInput, TouchableOpacity,Button} from 'react-native';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import {View, Text, Image, TextInput,StyleSheet,Button} from 'react-native';
 
-const phone = <Icon name="mobile-phone" size={40} color="#687980" />;
-const lock = <Icon name="lock" size={40} color="#687980" />;
-export default class VerifyPhoneScreen extends React.Component{
+export default class ForgetPasswordScreen extends React.Component{
   render(){
     return(
       <View style={{
@@ -22,16 +18,19 @@ export default class VerifyPhoneScreen extends React.Component{
           flex: 1,
           borderRadius: 10}}>
             <View style ={{
-              alignItems:'center'
+              alignItems:'center',
+              flexDirection : 'column'
             }}>
               <Text style ={{
                 fontFamily:'Roboto',
                 fontWeight:'bold',
                 fontSize: 20,
                 marginTop:20
-              }}>
-                Verify Your Mobile Number
+              }}>Enter You Phone Number
               </Text>
+              <Text style={{
+                color : '#687980'
+              }}>To Reset Your Password</Text>
             </View>
             <View style={{
               flexDirection:'row',
@@ -52,7 +51,7 @@ export default class VerifyPhoneScreen extends React.Component{
                 placeholder="Mobile Number"/>
               </View>
             </View>
-            <View style={{marginHorizontal:50, marginVertical: 20}}>
+            <View style={{marginHorizontal:50, marginVertical: 25}}>
             <Button
               title = 'Send OTP'
               color = '#018EF7'
@@ -64,3 +63,18 @@ export default class VerifyPhoneScreen extends React.Component{
     )
   }
 }
+const styles = StyleSheet.create({
+  TextInput :{
+    backgroundColor:'#f5f4f2',
+    fontWeight:'bold',
+    alignSelf: 'center',
+    padding: 10,
+    fontSize:20,
+    height: 55,
+    width: '10%',
+    borderRadius: 10,
+    borderColor:'grey',
+    textAlign:'center',
+
+  }
+})

@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, Text, Image, TextInput,StyleSheet,Button} from 'react-native';
 
-export default class App extends React.Component{
+export default class OtpForgetPasswordScreen extends React.Component{
   render(){
     return(
       <View style={{

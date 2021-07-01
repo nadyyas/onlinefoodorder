@@ -5,7 +5,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 
 const phone = <Icon name="mobile-phone" size={40} color="#687980" />;
 const lock = <Icon name="lock" size={40} color="#687980" />;
-export default class App extends React.Component{
+export default class SignUpScreen extends React.Component{
   render(){
     return(
       <View style={{

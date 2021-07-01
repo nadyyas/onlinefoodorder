@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, Text, Image, TextInput,StyleSheet,Button} from 'react-native';
 
-export default class App extends React.Component{
+export default class OtpScreen extends React.Component{
   render(){
     return(
       <View style={{
@@ -30,7 +30,7 @@ export default class App extends React.Component{
               </Text>
               <Text style={{
                 color : '#687980'
-              }}>Enter 4 digits verification code sent to your number.</Text>
+              }}>Enter 4 digits verification code sent to your number</Text>
             </View>
             <View style ={{justifyContent:'space-evenly', flexDirection:'row', paddingTop: 20}}>
               <TextInput
@@ -56,7 +56,7 @@ export default class App extends React.Component{
             </View>
             <View style={{marginHorizontal:50, marginVertical: 25}}>
             <Button
-              title = 'Reset Password'
+              title = 'Sign Up'
               color = '#018EF7'
             />
             </View>
