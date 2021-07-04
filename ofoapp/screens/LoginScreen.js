@@ -70,10 +70,12 @@ export default class LoginScreen extends React.Component{
             <View style={{
               alignItems:'center'
             }}>
-            <Text style={{textDecorationLine:'underline', color:'#018EF7'}}>
+            <Text style={{textDecorationLine:'underline', color:'#018EF7'}}
+            onPress = {() => this.props.navigation.navigate ('SignUp')}>
               Does't Have Account?
             </Text>
-            <Text style={{textDecorationLine:'underline', marginTop:8}}>
+            <Text style={{textDecorationLine:'underline', marginTop:8}}
+            onPress = {() => this.props.navigation.navigate ('ForgetPassword')}>
               Forgot Password
             </Text>
             </View>

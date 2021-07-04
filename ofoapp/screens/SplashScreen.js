@@ -2,7 +2,13 @@ import React from 'react';
 import {View, Image, Text, Dimensions, StyleSheet} from 'react-native';
 
 const SplashScreen = ({navigation, user}) => {
-  setTimeout(() => {   
+  setTimeout(() => {
+      if(user == null) {
+          navigation.replace('Login');
+      }
+      else {
+          navigation.replace('Home');
+      }   
   }, 3000)
   return (
       <View

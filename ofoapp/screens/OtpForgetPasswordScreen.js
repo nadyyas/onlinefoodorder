@@ -36,22 +36,18 @@ export default class OtpForgetPasswordScreen extends React.Component{
               <TextInput
               maxLength={1}
               style={styles.TextInput}
-              value ={Number}
               keyboardType={'numeric'}></TextInput>
               <TextInput
               maxLength={1}
               style={styles.TextInput}
-              value ={Number}
               keyboardType={'numeric'}></TextInput>
               <TextInput
               maxLength={1}
               style={styles.TextInput}
-              value ={Number}
               keyboardType={'numeric'}></TextInput>
               <TextInput
               maxLength={1}
               style={styles.TextInput}
-              value ={Number}
               keyboardType={'numeric'}></TextInput>
             </View>
             <View style={{marginHorizontal:50, marginVertical: 25}}>
