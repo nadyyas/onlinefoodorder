@@ -10,7 +10,7 @@ export default class OtpScreen extends React.Component{
         <View style={{
           alignItems :'center',
           justifyContent :'center'}}>
-            <Image style={{width : 140, height: 140, borderRadius: 100, margin: 20}} source={require('./images/logo.png')}/>
+            <Image style={{width : 140, height: 140, borderRadius: 100, margin: 20}} source={require('../images/logo.png')}/>
         </View>
         <View
         style={{

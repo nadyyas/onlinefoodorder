@@ -18,7 +18,7 @@ const SplashScreen = ({navigation, user}) => {
               justifyContent: 'center',
               backgroundColor: '#018EF7',
       }}>
-          <Image style={{width : 160, height: 160, borderRadius: 100}} source={require('./images/logo.png')}/>
+          <Image style={{width : 160, height: 160, borderRadius: 100}} source={require('../images/logo.png')}/>
           <Text style={styles.tulisan1}>Order Food Online</Text>
       </View>
   )

@@ -12,15 +12,19 @@ import SignUpScreen from './screens/SignUpScreen';
 import SplashScreen from './screens/SplashScreen';
 import VerifyPhoneScreen from './screens/VerifyPhoneScreen';
 
+import Home from './screens/Home';
+import MyTabs from './navigations/MyTabs';
+import Logout from './screens/Logout';
+
 const Stack = createStackNavigator();
 export default function App (){
   return(
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Splash" options={{
+        <Stack.Screen name="Splash" component={SplashScreen} options={{
           headerShown: false
         }} >
-          { props => <SplashScreen {...props} user={user}/> }
+          {/* { props => <SplashScreen {...props} user={user}/> } */}
         </Stack.Screen>
         <Stack.Screen name = "EditProfile" component={EditProfileScreen} options = {{
           headerShown : false,
@@ -31,6 +35,12 @@ export default function App (){
         <Stack.Screen name = "Login" component={LoginScreen} options = {{
           headerShown : false,
         }}/>
+        <Stack.Screen name = "Home" component={MyTabs} options = {{
+          headerShown : false,}}
+        />
+        <Stack.Screen name = "Logout" component={Logout} options = {{
+          headerShown : false,}}
+        />
         <Stack.Screen name = "OtpForgetPassword" component={OtpForgetPasswordScreen} options = {{
           headerShown : false,
         }}/>
@@ -46,9 +56,8 @@ export default function App (){
         <Stack.Screen name = "VerifyPhone" component={VerifyPhoneScreen} options = {{
           headerShown : false,
         }}/>
-        <Stack.Screen name = "EditProfile" component={EditProfileScreen} options = {{
-          headerShown : false,
-        }}/>
+
+        
       </Stack.Navigator>
     </NavigationContainer>
   )

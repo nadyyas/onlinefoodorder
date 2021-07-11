@@ -1,6 +1,6 @@
 import { styles } from 'ansi-colors';
 import React from 'react';
-import {View, Text, Image, TextInput, TouchableOpacity,Button} from 'react-native';
+import {View, Text, Image, TextInput, TouchableOpacity, Button} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 const phone = <Icon name="mobile-phone" size={40} color="#687980" />;
@@ -14,7 +14,7 @@ export default class LoginScreen extends React.Component{
         <View style={{
           alignItems :'center',
           justifyContent :'center'}}>
-            <Image style={{width : 140, height: 140, borderRadius: 100, margin: 20}} source={require('./images/logo.png')}/>
+            <Image style={{width : 140, height: 140, borderRadius: 100, margin: 20}} source={require('../images/logo.png')}/>
         </View>
         <View
         style={{
@@ -65,6 +65,7 @@ export default class LoginScreen extends React.Component{
             <Button
               title = 'Log in'
               color = '#018EF7'
+              onPress = {() => this.props.navigation.navigate ('Home')}
             />
             </View>
             <View style={{
