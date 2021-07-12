@@ -52,51 +52,6 @@ export default function App (){
         <Stack.Screen name = "Home" component={MyTabs} options = {{
           headerShown : false,}}
         />
-        <Stack.Screen name="Logout" options={{ headerShown: false }}>
-                { props => <Logout {...props} user={user}/> }
-      </Stack.Screen>
-        </>:
-        <>
-        <Stack.Screen name="Splash" component={SplashScreen} options={{
-          headerShown: false
-        }} >
-          {/* { props => <SplashScreen {...props} user={user}/> } */}
-        </Stack.Screen>
-        <Stack.Screen name = "EditProfile" component={EditProfileScreen} options = {{
-          headerShown : false,
-        }}/>
-        <Stack.Screen name = "Login" component={LoginScreen} options = {{
-          headerShown : false,
-        }}/>
-        <Stack.Screen name = "SignUp" component={SignUpScreen} options = {{
-          headerShown : false,
-        }}/>
-        </>
-        }
-        
-
-        <Stack.Screen name = "Home" component={MyTabs} options = {{
-          headerShown : false,}}
-        />
-        
-        <Stack.Screen name = "Logout" component={Logout} options = {{
-          headerShown : false,}}
-        />
-        <Stack.Screen name = "OtpForgetPassword" component={OtpForgetPasswordScreen} options = {{
-          headerShown : false,
-        }}/>
-        <Stack.Screen name = "Otp" component={OtpScreen} options = {{
-          headerShown : false,
-        }}/>
-        <Stack.Screen name = "ResetPassword" component={ResetPasswordScreen} options = {{
-          headerShown : false,
-        }}/>
-        <Stack.Screen name = "SignUp" component={SignUpScreen} options = {{
-          headerShown : false,
-        }}/>
-        <Stack.Screen name = "VerifyPhone" component={VerifyPhoneScreen} options = {{
-          headerShown : false,
-        }}/>
         <Stack.Screen name = "HotSale" component={HotSale} options = {{
           headerShown : false,}}
         />
@@ -127,6 +82,28 @@ export default function App (){
         <Stack.Screen name = "Order" component={Order} options = {{
           headerShown : false,}}
         />
+        <Stack.Screen name="Logout" options={{ headerShown: false }}>
+                { props => <Logout {...props} user={user}/> }
+      </Stack.Screen>
+        </>:
+        <>
+        <Stack.Screen name="Splash" component={SplashScreen} options={{
+          headerShown: false
+        }} >
+          {/* { props => <SplashScreen {...props} user={user}/> } */}
+        </Stack.Screen>
+        <Stack.Screen name = "EditProfile" component={EditProfileScreen} options = {{
+          headerShown : false,
+        }}/>
+        <Stack.Screen name = "Login" component={LoginScreen} options = {{
+          headerShown : false,
+        }}/>
+        <Stack.Screen name = "SignUp" component={SignUpScreen} options = {{
+          headerShown : false,
+        }}/>
+        </>
+        }
+        
         
       </Stack.Navigator>
     </NavigationContainer>

@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, Dimensions, Image, TextInput, TouchableOpacity, ScrollView, SafeAreaView, StyleSheet, Button} from 'react-native';
+import {View, Text, Dimensions, Image, TextInput, TouchableOpacity, ScrollView, SafeAreaView, StyleSheet, Button, Modal} from 'react-native';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import auth from '@react-native-firebase/auth';
@@ -13,6 +13,7 @@ export default class Logout extends React.Component {
         super(props);
         this.state = {
             profile: '',
+            show:false
         }
     }
 
@@ -159,9 +160,26 @@ export default class Logout extends React.Component {
 
                     <View style={{height: 100, top:20, justifyContent: 'center', alignItems: 'center'}}>
                         <View style={{backgroundColor: 'rgba(0, 0, 0, 0.5)', width: 354, height: 55, bottom: 10, borderRadius: 11, justifyContent: 'center', alignItems: 'center'}}>
-                            <Text style={{color: 'white', fontWeight: 'bold', fontSize:20}} onPress = {() => this.trySignOut()}>Log Out</Text>
+                            <Text style={{color: 'white', fontWeight: 'bold', fontSize:20}} onPress = {() => this.setState({show:true})}>Log Out</Text>
                         </View>
                     </View>
+                    <Modal transparent={true} visible={this.state.show}>
+                        <View style={{backgroundColor:'#000000aa', flex:1, }}>
+                            <View style={{backgroundColor:'white', marginBottom:270, marginTop:270, marginLeft:25, marginRight:25, borderRadius:10, flex:1, justifyContent:'center', alignItems:'center'}}>
+                                <View style={{flex:1, justifyContent:'center', alignItems:'center'}}>
+                                    <Text style={{fontSize:15, lineHeight:18}}>Are you sure want to log out?</Text>
+                                </View>
+                                <View style={{flexDirection:'row', flex: 1, }}>
+                                    <View style={{justifyContent:'center', alignItems:'center', marginLeft: 30, marginRight: 30}}>
+                                        <Text style={{fontWeight: 'bold', fontSize: 15, lineHeight:18}} onPress = {() => this.setState({show:false})}>Cancel</Text>
+                                    </View>
+                                    <View style={{justifyContent:'center', alignItems:'center', marginLeft: 30, marginRight: 30}}>
+                                        <Text style={{fontWeight: 'bold', fontSize: 15, color: 'red', lineHeight:18}} onPress = {() => this.trySignOut()}>Log Out</Text>
+                                    </View>
+                                </View>
+                            </View>
+                        </View>
+                    </Modal>
                 </ScrollView>
             </SafeAreaView>
         )

@@ -22,7 +22,7 @@ export default class Account extends React.Component {
                     <View style={{flex : 1, top: 30, height: 385}}>
                         <View style={{flexDirection: 'row', height: 50, alignItems:'center', justifyContent: 'center', }}>
                             <View style={{flex: 1}}>
-                                <Text style={{color: 'white', fontWeight: 'bold', fontSize: 20, lineHeight: 23, left: 30}}>Name</Text>
+                                <Text style={{color: 'white', fontWeight: 'bold', fontSize: 20, lineHeight: 23, left: 30}} onPress = {() => this.props.navigation.navigate ('Logout')}>Account</Text>
                             </View>
                             <View style={{flex: 1, flexDirection: 'row', justifyContent: 'center', alignItems: 'center'}}>
                                 <Text style={{color: 'white', fontSize: 20, lineHeight: 23, left: 120, flex: 1}}></Text>
@@ -35,7 +35,7 @@ export default class Account extends React.Component {
 
                         <View style={{flexDirection: 'row', height: 50, alignItems:'center', justifyContent: 'center', }}>
                             <View style={{flex: 1}}>
-                                <Text style={{color: 'white', fontWeight: 'bold', fontSize: 20, lineHeight: 23, left: 30}}>Handphone</Text>
+                                <Text style={{color: 'white', fontWeight: 'bold', fontSize: 20, lineHeight: 23, left: 30}}>Settings</Text>
                             </View>
                             <View style={{flex: 1, flexDirection: 'row', justifyContent: 'center', alignItems: 'center'}}>
                                 <Text style={{color: 'white', fontSize: 20, lineHeight: 23, left: 50}}></Text>
@@ -47,7 +47,7 @@ export default class Account extends React.Component {
                         </View>
                         <View style={{flexDirection: 'row', height: 50, alignItems:'center', justifyContent: 'center', }}>
                             <View style={{flex: 1}}>
-                                <Text style={{color: 'white', fontWeight: 'bold', fontSize: 20, lineHeight: 23, left: 30}}>Email</Text>
+                                <Text style={{color: 'white', fontWeight: 'bold', fontSize: 20, lineHeight: 23, left: 30}}>Privacy Policy</Text>
                             </View>
                             <View style={{flex: 1, flexDirection: 'row', justifyContent: 'center', alignItems: 'center'}}>
                                 <Text style={{color: 'white', fontSize: 20, lineHeight: 23, right:7}}></Text>
