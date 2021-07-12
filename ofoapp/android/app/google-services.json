@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1025833437436",
+    "project_id": "ofoo-f17ba",
+    "storage_bucket": "ofoo-f17ba.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1025833437436:android:31c30f2bc36f475fe0af79",
+        "android_client_info": {
+          "package_name": "com.ofoapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1025833437436-94jej7fa2g5sbe8diiejlq2neqngdbk1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKe2IsNiKdjLGI-lei5DzlwNsT2eHXgrI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1025833437436-94jej7fa2g5sbe8diiejlq2neqngdbk1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

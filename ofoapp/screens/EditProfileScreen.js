@@ -32,16 +32,6 @@ export default class EditProfileScreen extends React.Component{
         </View>
         <View style={styles.Container1}>
           <View>
-          <Text style={styles.Tulisan2}> User Name </Text>
-          </View>
-          <View>
-          <TextInput 
-          placeholder = 'input your user name'
-          placeholderTextColor='white'/>
-          </View> 
-        </View>
-        <View style={styles.Container1}>
-          <View>
           <Text style={styles.Tulisan2}> Phone Number </Text>
           </View>
           <View>
@@ -70,6 +60,7 @@ export default class EditProfileScreen extends React.Component{
             <Button
               title = 'Start'
               color = '#11698E'
+              onPress = {() => this.props.navigation.navigate ('Home')}
             />
             </View>
       </View>

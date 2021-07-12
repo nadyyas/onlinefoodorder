@@ -1,11 +1,36 @@
-import { styles } from 'ansi-colors';
 import React from 'react';
 import {View, Text, Image, TextInput, TouchableOpacity,Button} from 'react-native';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import Icon2 from 'react-native-vector-icons/Ionicons'
+import auth from '@react-native-firebase/auth';
+import firestore from '@react-native-firebase/firestore';
 
-const phone = <Icon name="mobile-phone" size={40} color="#687980" />;
-const lock = <Icon name="lock" size={40} color="#687980" />;
+const nama = <Icon2 name = "person" size={20} color="#687980" style={{marginTop:13}}></Icon2>
+const email = <Icon2 name = "mail" size={20} color="#687980" style={{marginTop:13}}></Icon2>
+const sandi = <Icon2 name = "key" size={20} color="#687980" style={{marginTop:13}}></Icon2>
+const nomor = <Icon2 name = "phone-portrait" size={20} color="#687980" style={{marginTop:13}}></Icon2>
+
 export default class SignUpScreen extends React.Component{
+
+      constructor (props) {
+        super(props)
+        this.state = {
+            email: '',
+            password: '',
+            username: '',
+            phoneNumber: '',
+        }
+    }
+
+    trySignUp = async(email, password) => {
+        const result = await auth().createUserWithEmailAndPassword(email, password)
+        firestore().collection('users').doc(result.user.uid).set({
+            name: this.state.username,
+            phone: this.state.phoneNumber,
+            email: result.user.email,
+            uid: result.user.uid,
+        })
+    }
+
   render(){
     return(
       <View style={{
@@ -28,44 +53,99 @@ export default class SignUpScreen extends React.Component{
                 fontFamily:'Roboto',
                 fontWeight:'bold',
                 fontSize: 20,
-                marginTop:10
+                marginTop:20
               }}>
                 Set Up Your Email and Password
               </Text>
             </View>
             <View style={{
               flexDirection:'row',
-              margin:30,
+              marginHorizontal:30,
               borderBottomColor:'#cc',
-              borderBottomWidth: 0.5
+              borderBottomWidth: 0.5,
+              marginTop: 10
             }}>
               <View>
-                {phone}
+                {nama}
               </View>
               <View style={{marginLeft:20}}>
                 <TextInput
-                placeholder="Mobile Number/e-mail"/>
+                placeholder="Name"
+                underlineColorAndroid='transparent'
+                value={this.state.username}
+                onChangeText={(text) => {this.setState({username:text})}}/>
               </View>
             </View>
             <View style={{
               flexDirection:'row',
               marginHorizontal:30,
               borderBottomColor:'#cc',
-              borderBottomWidth: 0.5
+              borderBottomWidth: 0.5,
+              marginTop: 10
             }}>
               <View>
-                {lock}
+                {nomor}
               </View>
               <View style={{marginLeft:20}}>
                 <TextInput
-                placeholder="Password"/>
+                placeholder="Phone Number"
+                underlineColorAndroid='transparent'
+                keyboardType = {'numeric'}
+                value={this.state.phoneNumber}
+                onChangeText={(text) => { this.setState({ phoneNumber: text })}}/>
               </View>
             </View>
-            <View style={{marginHorizontal:50, marginVertical: 20}}>
+            <View style={{
+              flexDirection:'row',
+              marginHorizontal:30,
+              borderBottomColor:'#cc',
+              borderBottomWidth: 0.5,
+              marginTop: 10
+            }}>
+              <View>
+                {email}
+              </View>
+              <View style={{marginLeft:20}}>
+                <TextInput
+                placeholder="E-Mail"
+                underlineColorAndroid='transparent'
+                value={this.state.email}
+                onChangeText={(text) => { this.setState({ email: text })}}/>
+              </View>
+            </View>
+            <View style={{
+              flexDirection:'row',
+              marginHorizontal:30,
+              borderBottomColor:'#cc',
+              borderBottomWidth: 0.5,
+              marginTop: 10
+            }}>
+              <View>
+                {sandi}
+              </View>
+              <View style={{marginLeft:20}}>
+                <TextInput
+                placeholder="Password, minimum 8 characters"
+                secureTextEntry={true}
+                value={this.state.password}
+                onChangeText={(text) => { this.setState({ password: text }) }}
+                underlineColorAndroid='transparent'/>
+              </View>
+            </View>
+            <View style={{marginHorizontal:50, marginVertical: 30, flexDirection: 'column'}}>
             <Button
               title = 'Sign Up'
               color = '#018EF7'
-            />
+              onPress = {() => this.trySignUp(this.state.email, this.state.password, this.state.username, this.state.phoneNumber)}
+            /></View>
+            <View style={{
+              alignItems:'center'
+            }}>
+            <Text>Does Have Account?</Text>
+            <Text style={{textDecorationLine:'underline', color:'#018EF7', fontWeight:'bold', marginTop: 15}}
+            onPress = {() => {this.props.navigation.navigate ('Login')}}>
+              Login Here
+            </Text>
             </View>
         </View>
       </View>

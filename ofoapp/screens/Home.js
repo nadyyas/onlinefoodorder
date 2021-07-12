@@ -13,10 +13,6 @@ const Home = () => {
         return(
             <SafeAreaView style={[styles.container]}>
                 <ScrollView style={{flex: 1, height: HEIGHT}}>
-                    <View>
-                        <Text style={[styles.user]}>Hi, Pipit!</Text>
-                    </View>
-                    
                     <View style={[styles.square]}>
                         {/* search bar */}
                         <MaterialCommunityIcons name="magnify" size={30} color="#018EF7" style={{top: HEIGHT-630, right:140}}/>

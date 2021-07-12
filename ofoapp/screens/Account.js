@@ -2,6 +2,7 @@ import React from 'react';
 import {View, Text, Dimensions, Image, TextInput, TouchableOpacity, ScrollView, SafeAreaView, StyleSheet, Button} from 'react-native';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
+import firestore from '@react-native-firebase/firestore';
 
 const { width: WIDTH } = Dimensions.get('window')
 const { height: HEIGHT } = Dimensions.get('window')
@@ -24,20 +25,7 @@ export default class Account extends React.Component {
                                 <Text style={{color: 'white', fontWeight: 'bold', fontSize: 20, lineHeight: 23, left: 30}}>Name</Text>
                             </View>
                             <View style={{flex: 1, flexDirection: 'row', justifyContent: 'center', alignItems: 'center'}}>
-                                <Text style={{color: 'white', fontSize: 20, lineHeight: 23, left: 120, flex: 1}}>Pipit</Text>
-                                <MaterialCommunityIcons name="menu-right" size={50} color='rgba(0, 0, 0, 0.4)' style={{flex: 1, left: 50}}></MaterialCommunityIcons>
-                            </View>
-                        </View>
-                        <View style={{justifyContent: 'center', alignItems: 'center'}}>
-                            <View style={{backgroundColor: 'black', width: 354, height: 2 }}></View>
-                        </View>
-
-                        <View style={{flexDirection: 'row', height: 50, alignItems:'center', justifyContent: 'center',}}>
-                            <View style={{flex: 1}}>
-                                <Text style={{color: 'white', fontWeight: 'bold', fontSize: 20, lineHeight: 23, left: 30}}>User Name</Text>
-                            </View>
-                            <View style={{flex: 1, flexDirection: 'row', justifyContent: 'center', alignItems: 'center'}}>
-                                <Text style={{color: 'white', fontSize: 20, lineHeight: 23, left: 105, flex: 1}}>Uhuy1</Text>
+                                <Text style={{color: 'white', fontSize: 20, lineHeight: 23, left: 120, flex: 1}}></Text>
                                 <MaterialCommunityIcons name="menu-right" size={50} color='rgba(0, 0, 0, 0.4)' style={{flex: 1, left: 50}}></MaterialCommunityIcons>
                             </View>
                         </View>
@@ -50,8 +38,8 @@ export default class Account extends React.Component {
                                 <Text style={{color: 'white', fontWeight: 'bold', fontSize: 20, lineHeight: 23, left: 30}}>Handphone</Text>
                             </View>
                             <View style={{flex: 1, flexDirection: 'row', justifyContent: 'center', alignItems: 'center'}}>
-                                <Text style={{color: 'white', fontSize: 20, lineHeight: 23, left: 50}}>**********89</Text>
-                                <MaterialCommunityIcons name="menu-right" size={50} color='rgba(0, 0, 0, 0.4)' style={{flex: 1, left: 43}}></MaterialCommunityIcons>
+                                <Text style={{color: 'white', fontSize: 20, lineHeight: 23, left: 50}}></Text>
+                                <MaterialCommunityIcons name="menu-right" size={50} color='rgba(0, 0, 0, 0.4)' style={{flex: 1, left: 150}}></MaterialCommunityIcons>
                             </View>
                         </View>
                         <View style={{justifyContent: 'center', alignItems: 'center'}}>
@@ -62,8 +50,8 @@ export default class Account extends React.Component {
                                 <Text style={{color: 'white', fontWeight: 'bold', fontSize: 20, lineHeight: 23, left: 30}}>Email</Text>
                             </View>
                             <View style={{flex: 1, flexDirection: 'row', justifyContent: 'center', alignItems: 'center'}}>
-                                <Text style={{color: 'white', fontSize: 20, lineHeight: 23, right:7}}>off***********.com</Text>
-                                <MaterialCommunityIcons name="menu-right" size={50} color='rgba(0, 0, 0, 0.4)' style={{flex: 1, right: 12}}></MaterialCommunityIcons>
+                                <Text style={{color: 'white', fontSize: 20, lineHeight: 23, right:7}}></Text>
+                                <MaterialCommunityIcons name="menu-right" size={50} color='rgba(0, 0, 0, 0.4)' style={{flex: 1, left: 150}}></MaterialCommunityIcons>
                             </View>
                         </View>
                         <View style={{justifyContent: 'center', alignItems: 'center'}}>
