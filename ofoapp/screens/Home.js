@@ -5,11 +5,11 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import { responsiveFontSize, responsiveHeight } from 'react-native-responsive-dimensions';
 
-
 const { width: WIDTH } = Dimensions.get('window')
 const { height: HEIGHT } = Dimensions.get('window')
 
-const Home = () => {
+export default class Home extends React.Component {
+    render(){
         return(
             <SafeAreaView style={[styles.container]}>
                 <ScrollView style={{flex: 1, height: HEIGHT}}>
@@ -21,25 +21,25 @@ const Home = () => {
 
                         {/* navigasi atas */}
                         <View style={{height: 52, top: 55, flexDirection: 'row'}}>
-                            <View style={{flex: 1, alignItems: 'center', justifyContent:'center'}}>
+                            <View style={{flex: 1, alignItems: 'center', justifyContent:'center'}} onPress = {() => this.props.navigation.navigate ('Nearme')}>
                                 <View style={{width: 32, height: 32, backgroundColor: 'white'}}>
-                                    <MaterialCommunityIcons name="map-marker-radius" size={30} color="#018EF7"/>
+                                    <MaterialCommunityIcons name="map-marker-radius" size={30} color="#018EF7" onPress = {() => this.props.navigation.navigate ('Nearme')}/>
                                 </View>
-                                <Text style={{fontWeight: 'bold', color: '#018EF7'}}>Near Me</Text>
+                                <Text style={{fontWeight: 'bold', color: '#018EF7'}} onPress = {() => this.props.navigation.navigate ('Nearme')}>Near Me</Text>
                                 <View style={{width: 36, height:4, borderRadius:2, top: 5, backgroundColor:'#C4C4C4'}}></View>
                             </View>
-                            <View style={{flex: 1, alignItems: 'center', justifyContent:'center'}}>
+                            <View style={{flex: 1, alignItems: 'center', justifyContent:'center'}}  onPress = {() => this.props.navigation.navigate ('HotSale')}>
                                 <View style={{width: 32, height: 32, backgroundColor: 'white'}}>
-                                    <MaterialCommunityIcons name="fire" size={30} color="#018EF7"/>
+                                    <MaterialCommunityIcons name="fire" size={30} color="#018EF7"  onPress = {() => this.props.navigation.navigate ('HotSale')}/>
                                 </View>
-                                <Text style={{fontWeight: 'bold', color: '#018EF7'}}>Hot Sale</Text>
+                                <Text style={{fontWeight: 'bold', color: '#018EF7'}}  onPress = {() => this.props.navigation.navigate ('HotSale')}>Hot Sale</Text>
                                 <View style={{width: 36, height:4, borderRadius:2, top: 5, backgroundColor:'#C4C4C4'}}></View>
                             </View>
-                            <View style={{flex: 1, alignItems: 'center', justifyContent:'center'}}>
+                            <View style={{flex: 1, alignItems: 'center', justifyContent:'center'}} onPress = {() => this.props.navigation.navigate ('Promotion')}>
                                 <View style={{width: 32, height: 32, backgroundColor: 'white'}}>
-                                    <MaterialCommunityIcons name="ticket-percent" size={30} color="#018EF7"/>
+                                    <MaterialCommunityIcons name="ticket-percent" size={30} color="#018EF7" onPress = {() => this.props.navigation.navigate ('Promotion')}/>
                                 </View>
-                                <Text style={{fontWeight: 'bold', color: '#018EF7'}}>Promotion</Text>
+                                <Text style={{fontWeight: 'bold', color: '#018EF7'}} onPress = {() => this.props.navigation.navigate ('Promotion')}>Promotion</Text>
                                 <View style={{width: 36, height:4, borderRadius:2, top: 5, backgroundColor:'#C4C4C4'}}></View>
                             </View>
                             <View style={{flex: 1, alignItems: 'center', justifyContent:'center'}}>
@@ -73,9 +73,9 @@ const Home = () => {
                                 </View>
                                 <View style={{flex: 1, alignItems: 'center', right: 40, justifyContent:'center'}}>
                                     <View style={{width: 40, height: 40}}>
-                                        <MaterialCommunityIcons name="arrow-up-box" size={40} color="white"/>
+                                        <MaterialCommunityIcons name="arrow-up-box" size={40} color="white" onPress = {() => this.props.navigation.navigate ('Topup')}/>
                                     </View>
-                                    <Text style={{fontWeight: 'bold', fontSize: 13.28, color: 'white'}}>Top Up</Text>
+                                    <Text style={{fontWeight: 'bold', fontSize: 13.28, color: 'white'}}  onPress = {() => this.props.navigation.navigate ('Topup')}>Top Up</Text>
                                 </View>
                             </View>
                         </View>
@@ -91,12 +91,10 @@ const Home = () => {
                         </View>
                     </View>
                 </ScrollView>
-                
-                
             </SafeAreaView>
         )
     }
-export default Home
+}
 
 const styles = StyleSheet.create({
     container: {

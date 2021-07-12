@@ -9,9 +9,20 @@ import LoginScreen from './screens/LoginScreen';
 import SignUpScreen from './screens/SignUpScreen';
 import SplashScreen from './screens/SplashScreen';
 
-import Home from './screens/Home';
+
+
 import MyTabs from './navigations/MyTabs';
 import Logout from './screens/Logout';
+import HotSale from './screens/HotSale';
+import Promotion from './screens/Promotion';
+import Reorder from './screens/Reorder';
+import TopUp from './screens/Topup';
+import Method from './screens/Method';
+import Invoice from './screens/Invoice';
+import Nearme from './screens/Nearme';
+import Nearme1 from './screens/Nearme1';
+import Nearme2 from './screens/Nearme2';
+import Order from './screens/Order';
 
 const Stack = createStackNavigator();
 
@@ -64,6 +75,58 @@ export default function App (){
         }
         
 
+        <Stack.Screen name = "Home" component={MyTabs} options = {{
+          headerShown : false,}}
+        />
+        
+        <Stack.Screen name = "Logout" component={Logout} options = {{
+          headerShown : false,}}
+        />
+        <Stack.Screen name = "OtpForgetPassword" component={OtpForgetPasswordScreen} options = {{
+          headerShown : false,
+        }}/>
+        <Stack.Screen name = "Otp" component={OtpScreen} options = {{
+          headerShown : false,
+        }}/>
+        <Stack.Screen name = "ResetPassword" component={ResetPasswordScreen} options = {{
+          headerShown : false,
+        }}/>
+        <Stack.Screen name = "SignUp" component={SignUpScreen} options = {{
+          headerShown : false,
+        }}/>
+        <Stack.Screen name = "VerifyPhone" component={VerifyPhoneScreen} options = {{
+          headerShown : false,
+        }}/>
+        <Stack.Screen name = "HotSale" component={HotSale} options = {{
+          headerShown : false,}}
+        />
+        <Stack.Screen name = "Promotion" component={Promotion} options = {{
+          headerShown : false,}}
+        />
+        <Stack.Screen name = "Reorder" component={Reorder} options = {{
+          headerShown : false,}}
+        />
+        <Stack.Screen name = "Topup" component={TopUp} options = {{
+          headerShown : false,}}
+        />
+        <Stack.Screen name = "Method" component={Method} options = {{
+          headerShown : false,}}
+        />
+        <Stack.Screen name = "Invoice" component={Invoice} options = {{
+          headerShown : false,}}
+        />
+        <Stack.Screen name = "Nearme" component={Nearme} options = {{
+          headerShown : false,}}
+        />
+        <Stack.Screen name = "Nearme1" component={Nearme1} options = {{
+          headerShown : false,}}
+        />
+        <Stack.Screen name = "Nearme2" component={Nearme2} options = {{
+          headerShown : false,}}
+        />
+        <Stack.Screen name = "Order" component={Order} options = {{
+          headerShown : false,}}
+        />
         
       </Stack.Navigator>
     </NavigationContainer>

@@ -1,18 +1,20 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import Home from '../screens/Home';
-import History from '../screens/History';
-import MyOrder from '../screens/MyOrder';
-import Account from '../screens/Account';
+
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import { responsiveFontSize, responsiveHeight } from 'react-native-responsive-dimensions'
 import { useAppContext } from '../context/Context';
 import { CHANGE_HEADER } from '../context/reducer';
+import Home from '../screens/Home';
+import History from '../screens/History';
+import MyOrder from '../screens/MyOrder';
+import Account from '../screens/Account';
+
 
 const MyTabs = () => {
     const Tab = createBottomTabNavigator()
-
+    
     return (
         <Tab.Navigator
             screenOptions={({ route }) => ({

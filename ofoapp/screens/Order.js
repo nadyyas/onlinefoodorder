@@ -3,11 +3,12 @@ import {View, Text, Dimensions, Image, TextInput, TouchableOpacity, ScrollView, 
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 
-export default class MyOrder extends React.Component {
+export default class Order extends React.Component {
     constructor(){
         super();
         this.state={
-            show:false
+            show:false,
+            show1:false
         }
     }
 
@@ -89,11 +90,28 @@ export default class MyOrder extends React.Component {
 
                     <View style={{height: 80, top:20, backgroundColor: 'white', justifyContent: 'center', alignItems: 'center'}}>
                         <View style={{backgroundColor: '#018EF7', width: 208, height: 39, bottom: 10, borderRadius: 11, justifyContent: 'center', alignItems: 'center'}}>
-                            <Text style={{color: 'white', fontWeight: 'bold', fontSize:16}} onPress = {() => this.setState({show:true})}>Show Barcode</Text>
+                            <Text style={{color: 'white', fontWeight: 'bold', fontSize:16}} onPress = {() => this.setState({show:true, show1:false})}>Order</Text>
                         </View>
                     </View>
-
                     <Modal transparent={true} visible={this.state.show}>
+                        <View style={{backgroundColor:'#000000aa', flex:1, }}>
+                            <View style={{backgroundColor:'white', marginBottom:270, marginTop:270, marginLeft:25, marginRight:25, borderRadius:10, flex:1, justifyContent:'center', alignItems:'center'}}>
+                                <View style={{flex:1, justifyContent:'center', alignItems:'center'}}>
+                                    <Text style={{fontSize:15, lineHeight:18}}>Are you sure want order?</Text>
+                                </View>
+                                <View style={{flexDirection:'row', flex: 1, }}>
+                                    <View style={{justifyContent:'center', alignItems:'center', marginLeft: 30, marginRight: 30}}>
+                                        <Text style={{fontWeight: 'bold', fontSize: 15, lineHeight:18}} onPress = {() => this.setState({show:false, show1:false})}>Cancel</Text>
+                                    </View>
+                                    <View style={{justifyContent:'center', alignItems:'center', marginLeft: 30, marginRight: 30}}>
+                                        <Text style={{fontWeight: 'bold', fontSize: 15, color: '#018EF7', lineHeight:18}} onPress = {() => this.setState({show:false, show1:true})}>Order</Text>
+                                    </View>
+                                </View>
+                            </View>
+                        </View>
+                    </Modal>
+
+                    <Modal transparent={true} visible={this.state.show1}>
                         <View style={{backgroundColor:'#000000aa', flex:1, }}>
                             <View style={{backgroundColor:'white', marginBottom:150, marginTop:150, marginLeft:25, marginRight:25, borderRadius:10, flex:1, justifyContent:'center', alignItems:'center'}}>
                                 <View style={{flex:1, justifyContent:'center', alignItems:'center', top: 30}}>
@@ -104,7 +122,7 @@ export default class MyOrder extends React.Component {
                                         <Text style={{ fontSize: 15, lineHeight:18}}>Here is Your Barcode</Text>
                                         <Text style={{fontSize: 15, lineHeight:18}}>Show to owner to confirm your order</Text>
                                         <View style={{backgroundColor: '#018EF7', width: 208, height: 39,marginTop:20, borderRadius: 11, justifyContent: 'center', alignItems: 'center'}} onPress = {() => this.setState({show:true})}>
-                                            <Text style={{color: 'white', fontWeight: 'bold', fontSize:16}} onPress = {() => this.setState({show:false})}>Done</Text>
+                                            <Text style={{color: 'white', fontWeight: 'bold', fontSize:16}} onPress = {() => this.props.navigation.navigate ('MyOrder')}>Done</Text>
                                         </View>
                                     </View>
                                 </View>

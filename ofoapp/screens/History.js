@@ -20,7 +20,7 @@ export default class History extends React.Component {
                             </View>
                             <View style={{flex: 1, justifyContent: 'center', alignItems: 'center', bottom:7, left: 50 }}>
                                 <Text style={{fontWeight: 'bold', fontSize: 16, lineHeight: 19 }}>75.500</Text>
-                                <Text style={{fontWeight: 'bold', fontSize: 16, lineHeight: 19, color: '#018EF7' }}>Reorder</Text>
+                                <Text style={{fontWeight: 'bold', fontSize: 16, lineHeight: 19, color: '#018EF7' }} onPress = {() => this.props.navigation.navigate ('Reorder')}>Reorder</Text>
                             </View>
                         </View>
                         <View style={{height: 70, backgroundColor: 'white', top: 5,  flexDirection: 'row'}}>
@@ -31,7 +31,7 @@ export default class History extends React.Component {
                             </View>
                             <View style={{flex: 1, justifyContent: 'center', alignItems: 'center', bottom:7, left: 50 }}>
                                 <Text style={{fontWeight: 'bold', fontSize: 16, lineHeight: 19 }}>75.500</Text>
-                                <Text style={{fontWeight: 'bold', fontSize: 16, lineHeight: 19, color: '#018EF7' }}>Reorder</Text>
+                                <Text style={{fontWeight: 'bold', fontSize: 16, lineHeight: 19, color: '#018EF7' }} onPress = {() => this.props.navigation.navigate ('Reorder')}>Reorder</Text>
                             </View>
                         </View>
                         <View style={{height: 70, backgroundColor: 'white', top: 5,  flexDirection: 'row'}}>
@@ -42,7 +42,7 @@ export default class History extends React.Component {
                             </View>
                             <View style={{flex: 1, justifyContent: 'center', alignItems: 'center', bottom:7, left: 50 }}>
                                 <Text style={{fontWeight: 'bold', fontSize: 16, lineHeight: 19 }}>75.500</Text>
-                                <Text style={{fontWeight: 'bold', fontSize: 16, lineHeight: 19, color: '#018EF7' }}>Reorder</Text>
+                                <Text style={{fontWeight: 'bold', fontSize: 16, lineHeight: 19, color: '#018EF7' }} onPress = {() => this.props.navigation.navigate ('Reorder')}>Reorder</Text>
                             </View>
                         </View>
                         <View style={{height: 70, backgroundColor: 'white', top: 5,  flexDirection: 'row'}}>
@@ -53,7 +53,7 @@ export default class History extends React.Component {
                             </View>
                             <View style={{flex: 1, justifyContent: 'center', alignItems: 'center', bottom:7, left: 50 }}>
                                 <Text style={{fontWeight: 'bold', fontSize: 16, lineHeight: 19 }}>75.500</Text>
-                                <Text style={{fontWeight: 'bold', fontSize: 16, lineHeight: 19, color: '#018EF7' }}>Reorder</Text>
+                                <Text style={{fontWeight: 'bold', fontSize: 16, lineHeight: 19, color: '#018EF7' }} onPress = {() => this.props.navigation.navigate ('Reorder')}>Reorder</Text>
                             </View>
                         </View>
                         <View style={{height: 70, backgroundColor: 'white', top: 5,  flexDirection: 'row'}}>
@@ -64,7 +64,7 @@ export default class History extends React.Component {
                             </View>
                             <View style={{flex: 1, justifyContent: 'center', alignItems: 'center', bottom:7, left: 50 }}>
                                 <Text style={{fontWeight: 'bold', fontSize: 16, lineHeight: 19 }}>75.500</Text>
-                                <Text style={{fontWeight: 'bold', fontSize: 16, lineHeight: 19, color: '#018EF7' }}>Reorder</Text>
+                                <Text style={{fontWeight: 'bold', fontSize: 16, lineHeight: 19, color: '#018EF7' }} onPress = {() => this.props.navigation.navigate ('Reorder')}>Reorder</Text>
                             </View>
                         </View>
                         <View style={{height: 70, backgroundColor: 'white', top: 5,  flexDirection: 'row'}}>
@@ -75,7 +75,7 @@ export default class History extends React.Component {
                             </View>
                             <View style={{flex: 1, justifyContent: 'center', alignItems: 'center', bottom:7, left: 50 }}>
                                 <Text style={{fontWeight: 'bold', fontSize: 16, lineHeight: 19 }}>75.500</Text>
-                                <Text style={{fontWeight: 'bold', fontSize: 16, lineHeight: 19, color: '#018EF7' }}>Reorder</Text>
+                                <Text style={{fontWeight: 'bold', fontSize: 16, lineHeight: 19, color: '#018EF7' }} onPress = {() => this.props.navigation.navigate ('Reorder')}>Reorder</Text>
                             </View>
                         </View>
                         <View style={{height: 70, backgroundColor: 'white', top: 5,  flexDirection: 'row'}}>
@@ -86,7 +86,7 @@ export default class History extends React.Component {
                             </View>
                             <View style={{flex: 1, justifyContent: 'center', alignItems: 'center', bottom:7, left: 50 }}>
                                 <Text style={{fontWeight: 'bold', fontSize: 16, lineHeight: 19 }}>75.500</Text>
-                                <Text style={{fontWeight: 'bold', fontSize: 16, lineHeight: 19, color: '#018EF7' }}>Reorder</Text>
+                                <Text style={{fontWeight: 'bold', fontSize: 16, lineHeight: 19, color: '#018EF7' }} onPress = {() => this.props.navigation.navigate ('Reorder')}>Reorder</Text>
                             </View>
                         </View>
                         <View style={{height: 70, backgroundColor: 'white', top: 5,  flexDirection: 'row'}}>
@@ -97,7 +97,7 @@ export default class History extends React.Component {
                             </View>
                             <View style={{flex: 1, justifyContent: 'center', alignItems: 'center', bottom:7, left: 50 }}>
                                 <Text style={{fontWeight: 'bold', fontSize: 16, lineHeight: 19 }}>75.500</Text>
-                                <Text style={{fontWeight: 'bold', fontSize: 16, lineHeight: 19, color: '#018EF7' }}>Reorder</Text>
+                                <Text style={{fontWeight: 'bold', fontSize: 16, lineHeight: 19, color: '#018EF7' }} onPress = {() => this.props.navigation.navigate ('Reorder')}>Reorder</Text>
                             </View>
                         </View>
                         <View style={{height: 70, backgroundColor: 'white', top: 5,  flexDirection: 'row'}}>
@@ -108,7 +108,7 @@ export default class History extends React.Component {
                             </View>
                             <View style={{flex: 1, justifyContent: 'center', alignItems: 'center', bottom:7, left: 50 }}>
                                 <Text style={{fontWeight: 'bold', fontSize: 16, lineHeight: 19 }}>75.500</Text>
-                                <Text style={{fontWeight: 'bold', fontSize: 16, lineHeight: 19, color: '#018EF7' }}>Reorder</Text>
+                                <Text style={{fontWeight: 'bold', fontSize: 16, lineHeight: 19, color: '#018EF7' }} onPress = {() => this.props.navigation.navigate ('Reorder')}>Reorder</Text>
                             </View>
                         </View>
                     </View>
